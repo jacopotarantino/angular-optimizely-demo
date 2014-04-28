@@ -1,8 +1,6 @@
 'use strict';
 
 angular.module('angularOptimizelyDemoApp')
-  .controller('SampleCtrl', function ($scope, $http) {
-    $http.get('/api/awesomeThings').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
-    });
-  });
+.controller('SampleCtrl', ['ab', '$scope', function (ab, $scope) {
+  $scope.class = ab.test([1,2,3,4,5,6,7], 1);
+}]);

@@ -1,4 +1,8 @@
 div(ng-include='\'partials/navbar\'')
 
 .jumbotron
-  h1 This is the sample view.
+  h2 This is a sample view.
+  p
+    | We're running a custom A/B test in the code. The current test is
+    strong  # {{class}}
+  p This test is not an optimizely test and will not be cached in a cookie. Thus, it will be random every single time the view is loaded.
