@@ -8,7 +8,7 @@ angular.module('angularOptimizelyDemoApp', [
   'ab.test.service'
 ])
 
-.config(function ($routeProvider, $locationProvider) {
+.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'partials/main',
@@ -23,7 +23,13 @@ angular.module('angularOptimizelyDemoApp', [
     });
 
   $locationProvider.html5Mode(true);
-})
+}])
+
+.run(['$rootScope', 'postLoad', function($rootScope, postLoad) {
+  $rootScope.$on('$viewContentLoaded', function() {
+    postLoad();
+  });
+}])
 
 .factory('ab', ['abMfg', function(abMfg) {
   return abMfg();
