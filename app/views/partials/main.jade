@@ -1,6 +1,8 @@
 div(ng-include='\'partials/navbar\'')
 
-.jumbotron
+.jumbotron(
+  ng-show='awesomeThings.length > 0'
+)
   h1
     | 'Allo, 'Allo!
 
