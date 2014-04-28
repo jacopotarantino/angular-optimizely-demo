@@ -27,4 +27,15 @@ angular.module('angularOptimizelyDemoApp', [
 
 .factory('ab', ['abMfg', function(abMfg) {
   return abMfg();
+}])
+
+.factory('postLoad', ['$timeout', function($timeout) {
+  return function() {
+    console.log('Sending analytics to segment.io!');
+
+    $timeout(function() {
+      window.optimizely.push(['activate']);
+      console.log('triggered experiments');
+    });
+  };
 }]);
