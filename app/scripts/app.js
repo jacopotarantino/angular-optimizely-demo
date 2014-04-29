@@ -26,6 +26,8 @@ angular.module('angularOptimizelyDemoApp', [
 }])
 
 .run(['$rootScope', 'postLoad', function($rootScope, postLoad) {
+  window.optimizely.push(['activate']);
+
   $rootScope.$on('$viewContentLoaded', function() {
     postLoad();
   });

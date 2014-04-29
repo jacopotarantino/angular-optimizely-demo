@@ -21,6 +21,11 @@ html.no-js
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    script.
+      window['optimizely'] = window['optimizely'] || [];
+      // demonstrate that we can pass custom information to optimizely
+      window.optimizely.push(['customTag', 'fattyMcFat', 'McDonalds']);
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="//cdn.optimizely.com/js/880950754.js"></script>
 
