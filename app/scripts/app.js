@@ -18,6 +18,10 @@ angular.module('angularOptimizelyDemoApp', [
       templateUrl: 'partials/sample',
       controller: 'SampleCtrl'
     })
+    .when('/timer', {
+      templateUrl: 'partials/timer',
+      controller: 'TimerCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });

@@ -1,0 +1,46 @@
+div(ng-include='\'partials/navbar\'')
+
+.jumbotron
+  p
+    | This is the timer view.
+    |  We're trying to crash shit by making Angular manipulate a
+    |  TON of listeners on the page.
+  p
+    label Time to add 1218 listeners to the page at once:
+    br
+    input(
+      placeholder='instant'
+      ng-model='timer'
+    )
+    br
+    label Time to update(O2) all values:
+    br
+    input(
+      placeholder='instant'
+      ng-model='updated'
+    )
+    br
+    label Time to destroy them:
+    br
+    input(
+      placeholder='instant'
+      ng-model='destroyed'
+    )
+
+div(ng-repeat='group in Model.Groups')
+  span(style='font-weight: bold;') {{group.Name}}
+    div.singleFilterWrapper(
+      ng-repeat='filter in group.Filters'
+    )
+      input(
+        type='checkbox'
+        ng-model='filter.enabled'
+        id='check_{{group.Name}}_{{filter.Name}}'
+      )
+      label(
+        for='check_{{group.Name}}_{{filter.Name}}'
+      ) {{filter.Name}}
+      select(
+        ng-disabled='!filter.enabled'
+      )
+        option(ng-repeat='value in filter.Values') {{value}}

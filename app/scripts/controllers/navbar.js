@@ -9,6 +9,10 @@ angular.module('angularOptimizelyDemoApp')
     {
       'title': 'Sample',
       'link': '/sample'
+    },
+    {
+      'title': 'Timer',
+      'link': '/timer'
     }];
 
     $scope.isActive = function(route) {
