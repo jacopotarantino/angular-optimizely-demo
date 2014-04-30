@@ -13,6 +13,7 @@ div(ng-include='\'partials/navbar\'')
       ng-model='timer'
     )
     br
+
     label Time to update(O2) all values:
     br
     input(
@@ -20,11 +21,19 @@ div(ng-include='\'partials/navbar\'')
       ng-model='updated'
     )
     br
+
     label Time to destroy them:
     br
     input(
       placeholder='instant'
       ng-model='destroyed'
+    )
+
+    label Total time from when page started loading:
+    br
+    input(
+      placeholder='instant'
+      ng-model='totalTime'
     )
 
 div(ng-repeat='group in Model.Groups')

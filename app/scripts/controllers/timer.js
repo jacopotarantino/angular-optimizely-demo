@@ -58,4 +58,9 @@ angular.module('angularOptimizelyDemoApp')
     var boom = new Date();
     $scope.destroyed = boom - manipulated;
   });
+
+  $timeout(function() {
+    var theEnd = new Date();
+    $scope.totalTime = theEnd - window.loadTime;
+  });
 }]);
