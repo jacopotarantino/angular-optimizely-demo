@@ -22,6 +22,14 @@ angular.module('angularOptimizelyDemoApp', [
       templateUrl: 'partials/timer',
       controller: 'TimerCtrl'
     })
+    .when('/cdntimer', {
+      templateUrl: 'partials/cdntimer',
+      controller: 'CdntimerCtrl'
+    })
+    .when('/sanetimer', {
+      templateUrl: 'partials/sanetimer',
+      controller: 'SanetimerCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
