@@ -5,6 +5,7 @@ angular.module('angularOptimizelyDemoApp')
   var start = new Date(),
     end = null,
     manipulated = null;
+
   $timeout(function() {
     $scope.Model = {};
     var dt = [];
@@ -29,9 +30,9 @@ angular.module('angularOptimizelyDemoApp')
 
     $scope.Model.Groups = dt;
     $scope.$digest();
-    end = new Date();
   });
   $timeout(function() {
+    end = new Date();
     $scope.timer = end - start;
   });
 
