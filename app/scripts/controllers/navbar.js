@@ -21,6 +21,10 @@ angular.module('angularOptimizelyDemoApp')
   {
     'title': 'SaneTimer',
     'link': '/sanetimer'
+  },
+  {
+    'title': 'Normal Timer',
+    'link': '/expectedtimer'
   }];
 
   $scope.isActive = function(route) {

@@ -2,35 +2,29 @@ div(ng-include='\'partials/navbar\'')
 
 .jumbotron
   p
-    | This is the timer view.
-    |  We're trying to crash shit by making Angular manipulate a
-    |  TON of listeners on the page.
+    | This is the normal timer view.
+    |  We're just loading a normal/large set of views onto the page.
+    br
+    | I threw in an ajax request just to keep thinks interesting.
   p
+    label Time to make the ajax request once angular has compiled but before data insertion:
+    br
+    input(
+      placeholder='instant'
+      ng-model='ajax'
+    )
+    br
+
     label
-      | Time to add ~500 listeners to the page at once:
+      | Time to add ~350 listeners to the page at once:
       br
-      | 6 Groups, 8 Filters each, 6 Properties per filter, 5 options per filter, other stuff...
+      | 6 Groups, 5 Filters each, 6 Properties per filter, 5 options per filter, other stuff...
     br
     input(
       placeholder='instant'
       ng-model='timer'
     )
     br
-
-    label Time to update(O2) all values:
-    br
-    input(
-      placeholder='instant'
-      ng-model='updated'
-    )
-    br
-
-    label Time to destroy them:
-    br
-    input(
-      placeholder='instant'
-      ng-model='destroyed'
-    )
 
     label Total time from when page started loading:
     br

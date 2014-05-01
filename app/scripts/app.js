@@ -30,6 +30,10 @@ angular.module('angularOptimizelyDemoApp', [
       templateUrl: 'partials/sanetimer',
       controller: 'SanetimerCtrl'
     })
+    .when('/expectedtimer', {
+      templateUrl: 'partials/expectedtimer',
+      controller: 'ExpectedtimerCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
